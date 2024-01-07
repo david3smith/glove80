@@ -3264,7 +3264,7 @@ behaviors {
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
         #endif
         #binding-cells = <2>;
-        bindings  <&mo>, <&kp>;
+        bindings = <&mo>, <&kp>;
     };
     thumb_parang_left: thumb_layer_access_parang_left {
         compatible = "zmk,behavior-hold-tap";
