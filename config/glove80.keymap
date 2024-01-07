@@ -3264,7 +3264,7 @@ behaviors {
         quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
         #endif
         #binding-cells = <2>;
-        bindings = <&mo>, <&kp>;
+        bindings  <&mo>, <&kp>;
     };
     thumb_parang_left: thumb_layer_access_parang_left {
         compatible = "zmk,behavior-hold-tap";
@@ -3474,6 +3474,27 @@ behaviors {
 };
 
 macros {
+
+    ZMK_MACRO(ti_password,
+        wait-ms=<2>;
+        tap-ms=<5>;
+        bindings=<&kp A &kp N0 &kp N1 &kp N7 &kp N4 &kp N4 &kp N7 &kp N6 &kp TAB>
+                ,<&kp N &kp A &kp S &kp T &kp N5 &kp N1 &kp LS(V) &kp M &kp RET>;)
+
+    ZMK_MACRO(ti_password2,
+        wait-ms=<2>;
+        tap-ms=<5>;
+        bindings=<&kp N &kp A &kp S &kp T &kp N5 &kp N1 &kp LS(V) &kp M &kp RET>;)
+
+    ZMK_MACRO(mac_password,
+        wait-ms=<2>;
+        tap-ms=<5>;
+        bindings=<&kp D &kp D &kp A &kp V &kp N1 &kp D &kp O &kp N &kp E &kp N1 &kp RET>;)
+
+    ZMK_MACRO(ti_pcname,
+        wait-ms=<2>;
+        tap-ms=<5>;
+        bindings=<&kp D &kp T &kp M &kp X &kp L &kp N9 &kp N4 &kp N3 &kp N2 &kp V &kp M &kp N>;)
 
     //
     // Linux Magic System Request Key - hold this down and type REISUB
@@ -6221,10 +6242,10 @@ macros {
             bindings = <
            &none            &none            &none            &none            &none                                                                                                             &none      &none     &none     &none   &none
            &none            &none            &none            &none            &none   &none                                                                                          &none      &none      &none     &none     &none   &none
-           &none            &none  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI            &none   &none                                                                                          &none      &none      &none     &none     &none   &none
- &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF   &none                                                                                          &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &none
-           &none  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI   &none  &kp _LOCK  &kp _SLEEP       &kp _POWER              &none   &none               &none   &none      &none      &none     &none     &none   &none
-           &none            &none            &none            &none            &none          &kp PSCRN    &kp SLCK  &kp PAUSE_BREAK  &tog LAYER_System   &none  &linux_magic_sysrq              &none      &none     &none     &none   &none
+           &none            &none  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI            &none   &none                                                                                          &none      &none      &none     &none     &none   &ti_password
+ &rgb_ug RGB_TOG  &rgb_ug RGB_EFR  &rgb_ug RGB_BRD  &rgb_ug RGB_BRI  &rgb_ug RGB_EFF   &none                                                                                          &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI   &ti_password2
+           &none  &rgb_ug RGB_SPD  &rgb_ug RGB_SAD  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI   &none  &kp _LOCK  &kp _SLEEP       &kp _POWER              &none   &none               &none   &none      &none      &none     &none     &none   &mac_password
+           &none            &none            &none            &none            &none          &kp PSCRN    &kp SLCK  &kp PAUSE_BREAK  &tog LAYER_System   &none  &linux_magic_sysrq              &none      &none     &none     &none   &ti_pcname
             >;
         };
 
