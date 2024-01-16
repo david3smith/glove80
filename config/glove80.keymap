@@ -2831,22 +2831,6 @@ behaviors {
         #binding-cells = <2>;
         bindings = <&mo>, <&kp>;
     };
-    plain_engram_COMMA: plain_typing_layer_engram_COMMA {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = PLAIN_HOLDING_TYPE;
-        tapping-term-ms = <PLAIN_HOLDING_TIME>;
-        require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-        #binding-cells = <2>;
-        bindings = <&mo>, <&engram_COMMA>;
-    };
-    plain_engram_DOT: plain_typing_layer_engram_DOT {
-        compatible = "zmk,behavior-hold-tap";
-        flavor = PLAIN_HOLDING_TYPE;
-        tapping-term-ms = <PLAIN_HOLDING_TIME>;
-        require-prior-idle-ms = <PLAIN_STREAK_DECAY>;
-        #binding-cells = <2>;
-        bindings = <&mo>, <&engram_DOT>;
-    };
 
     //
     // Thumb cluster hold-tap keys for Miryoku layers
