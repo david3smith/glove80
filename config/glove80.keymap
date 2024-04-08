@@ -2950,7 +2950,7 @@ macros {
     ZMK_MACRO(ti_password2,
         wait-ms=<2>;
         tap-ms=<5>;
-        bindings=<&kp B &kp O &kp T &kp S &kp T &kp LS(A) &kp LS(Z) &kp N4 &kp RET>;)
+        bindings=<&kp H &kp R &kp I &kp N1 &kp Z &kp K &kp LS(H) &kp A &kp RET>;)
 
     ZMK_MACRO(mac_password,
         wait-ms=<2>;
